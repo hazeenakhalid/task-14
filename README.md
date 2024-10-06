@@ -16,7 +16,7 @@ In this task, I created a free virtual machine (VM) in my cloud account (AWS/GCP
    -  Capture a screenshot showing successful SSH login which is (aws).
 
 2. Clone the Repo from Taskten (HTML Page)
-   - After logging into the VM, clone your taskten repository from GitHub:
+   - After logging into the VM, clone your tasktwelve repository from GitHub:
      "git clone https://github.com/hazeenakhalid/task-12.git"
 
 3. Copy the Cloned Files to Apache Web Server Root Directory
