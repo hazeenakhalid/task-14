@@ -11,8 +11,9 @@ In this task, I created a free virtual machine (VM) in my cloud account (AWS/GCP
 1. Login to Your Cloud VM via SSH from Kali Linux
    - Open your Kali Linux terminal.
    - Use the following SSH command to log in to the VM:
-     "<ssh -i /home/kali/task13/kali_key.pem azureuser@20.192.9.221"
-   -  Capture a screenshot showing successful SSH login which is (auzre1.png).
+     "<ssh -i /media/sf_share-kali-files/task-13/ssh.pem ec2-user@3.112.205.48>
+"
+   -  Capture a screenshot showing successful SSH login which is (aws).
 
 2. Clone the Repo from Taskten (HTML Page)
    - After logging into the VM, clone your taskten repository from GitHub:
