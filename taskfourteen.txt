@@ -1,0 +1,70 @@
+
+# Steps to Deploy Web Application on Cloud VM
+
+## Step 1: Log in to Cloud VM
+- Opened Kali Linux terminal and logged into the cloud VM via SSH.
+- Command:
+  sudo ssh -i Documents/cloudkey.pem ec2-user@34.230.49.137
+- Screenshot: [SSH_LOGIN Screenshot]
+
+## Step 2: Clone Repository
+- Cloned the repository from my GitHub.
+- Command:
+  git clone https://github.com/AbhiramT21/webapp
+
+## Step 3: Copy Files to Apache Root Folder
+- Copied the cloned files from the repository to the root folder of the Apache web server.
+- Command:
+  sudo cp -r /home/ec2-user/webapp/cloudweb /var/www/html
+
+## Step 4: Start Apache Web Server
+- Started the Apache web server on the cloud VM.
+- Command:
+  sudo systemctl start httpd
+
+## Step 5: Access Web Page
+- Accessed the cloud VM via a local web browser to show the deployed web page.
+- Screenshot: [web_page Screenshot]
+
+## Step 6: Install PHP and MySQL
+- Checked for PHP and MySQL installation, installing them if necessary.
+- Command:
+  sudo yum install php
+
+## Step 7: Start MySQL Server
+- Started the MySQL server on the cloud VM and logged in.
+- Command:
+  sudo systemctl start mysqld
+  mysql -u root -p
+
+## Step 8: Create Database, Table, and User
+- Created a database, a table for user data, and a users.
+- Commands:
+  CREATE TABLE IF NOT EXISTS users (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    firstName VARCHAR(50) NOT NULL,
+    lastName VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    phoneNumber VARCHAR(15),
+    password VARCHAR(255) NOT NULL
+	);
+- Screenshot: [database_creation1 Screenshot]
+- Screenshot: [database_creation2 Screenshot]
+
+## Step 9: Create User Registration Files
+- Created necessary PHP files to register a users and saved data in the database table.
+
+## Step 10: Log In as Created User
+- Logged back in as the user created during the registration process and shown the data in database.
+- Screenshot: [login Screenshot]
+- Screenshot: [login_sql Screenshot]
+
+## Step 11: Verify Accessibility
+- Verified if the web page is accessible to anyone using the public IP address.
+- Public IP: 34.230.49.137
+
+## Step 12: Document Findings
+- Noted down the public IP address and shared it for verification with peers[shared with shafeek].
+- Screenshot: [publicIP_shared Screenshot]
+
+# End of Document
